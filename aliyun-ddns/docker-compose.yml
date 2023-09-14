@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  ddns_client:
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      - AKID=xxx
+      - AKSCT=xxx
+      - DOMAIN=xxx
+      - REDO=60
+      - TTL=600
+      - TYPE=A
+      - CNIPV4=true
+    deploy:
+      resources:
+        limits:
+          memory: 128M

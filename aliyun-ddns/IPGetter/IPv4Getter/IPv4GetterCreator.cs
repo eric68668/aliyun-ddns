@@ -9,11 +9,11 @@ namespace aliyun_ddns.IPGetter.IPv4Getter
     {
         private static readonly IEnumerable<IIPv4Getter> _definedGetters = new CommonIPv4Getter[]
             {
-                new CommonIPv4Getter("test-ipv6.com接口", "https://ipv4.lookup.test-ipv6.com/ip/", 100),
-                //new CommonIPv4Getter("ipip.net接口", "http://myip.ipip.net/"),
-                new CommonIPv4Getter("ip-api.com接口", "http://ip-api.com/json/?fields=query", 100),
-                new CommonIPv4Getter("淘宝接口", "http://ip.taobao.com/service/getIpInfo.php?ip=myip"),
                 new CommonIPv4Getter("3322接口", "http://ip.3322.net/"),
+                new CommonIPv4Getter("3322接口2", "http://members.3322.org/dyndns/getip"),
+                new CommonIPv4Getter("Oray接口", "http://ddns.oray.com/checkip"),
+                new CommonIPv4Getter("浙大接口", "http://speedtest.zju.edu.cn/getIP.php"),
+                new CommonIPv4Getter("CloudflareCN接口", "https://www.cloudflare-cn.com/cdn-cgi/trace"),
             };
 
         public static IEnumerable<IIPv4Getter> Create()
