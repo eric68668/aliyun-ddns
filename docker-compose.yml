@@ -3,6 +3,7 @@ services:
   ddns_client:
     build:
       context: .
+      dockerfile: aliyun-ddns/Dockerfile
     restart: unless-stopped
     environment:
       - AKID=xxx
