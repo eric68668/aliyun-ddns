@@ -5,6 +5,10 @@ services:
       context: .
       dockerfile: aliyun-ddns/Dockerfile
     restart: unless-stopped
+    logging: 
+      driver: json-file
+      options: 
+        max-size: 10M
     environment:
       - AKID=xxx
       - AKSCT=xxx
