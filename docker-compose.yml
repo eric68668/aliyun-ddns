@@ -17,6 +17,9 @@ services:
       - TTL=600
       - TYPE=A
       - CNIPV4=true
+    volumes:
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
     deploy:
       resources:
         limits:
